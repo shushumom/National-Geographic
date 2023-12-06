@@ -1,0 +1,286 @@
+@charset 'utf-8';
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+  font-family: 'Geograph';
+  src: url('../fonts/Geograph-Medium.woff2') format('woff2'), url('../fonts/Geograph-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geograph';
+  src: url('../fonts/Geograph-Black.woff2') format('woff2'), url('../fonts/Geograph-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geograph';
+  src: url('../fonts/Geograph-Bold.woff2') format('woff2'), url('../fonts/Geograph-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-size: 100%; /* fz100p = 16px */
+  --text-color: #ffce00;
+  --text-color2: #fff;
+  --line-box: #ffce00;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.btn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 38px;
+  background: var(--line-box);
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  width: 230px;
+  height: 60px;
+}
+
+.btn-more::after {
+  content: '';
+  display: block;
+  background: url(../images/arrow2-b.png) 0 0 no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* animation */
+@keyframes zoom-in {
+  0% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes show-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font: 1rem/1.5 'Geograph', 'Pretendard', sans-serif; /* rem폰트 크기를 그대로 사용 */
+  color: var(--text-color2);
+  overflow-x: hidden; /* ovxh가로 스크롤이 사라짐 */
+  background: #000;
+  word-break: keep-all;
+}
+
+img {
+  max-width: 100%;
+}
+
+.inner {
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  /* background: #f55; */
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(7px);
+  z-index: 100;
+}
+.btn-menu {
+  display: none;
+}
+
+#header .inner {
+  max-width: 1750px;
+}
+#header nav {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  display: block;
+  width: 160px;
+  height: 50px;
+  background: url(../images/logo.png) 0 0 no-repeat;
+}
+
+.gnb {
+  display: flex;
+}
+
+.gnb li a {
+  display: block;
+  font-weight: 500;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 50px;
+}
+
+#footer {
+  background: #1d1d1d;
+  padding: 80px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+.foot-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot-logo {
+  display: block;
+  background: url(../images/logo.png) 0 0 no-repeat;
+  width: 160px;
+  height: 50px;
+}
+.foot-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.foot-menu li a {
+  font-size: 16px;
+}
+.foot-arrow {
+  display: flex;
+  align-items: center;
+}
+.foot-arrow::after {
+  content: '';
+  display: block;
+  background: url(../images/iconamoon_arrow-up-2-light.png) 0 0 no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.foot-social-links {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  height: 30px;
+}
+.address {
+  font-size: 14px;
+  margin-top: 30px;
+  font-family: 'Pretendard';
+  font-weight: 300;
+}
+.address p {
+  margin-top: 10px;
+  font-family: 'Pretendard';
+  font-weight: 200;
+}
+.foot-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-top: 30px;
+  font-family: 'Pretendard';
+  font-weight: 500;
+}
+
+/* 반응형 분기점 */
+@media (max-width: 1360px) {
+  .inner {
+    /* 태블릿 기준으로 적용, 태블릿의 뷰포트 나누기 이너, 이건 공식?처럼 쓰임 */
+    width: 93.75%;
+  }
+
+  #header {
+    position: absolute;
+    backdrop-filter: blur(0px);
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .logo a {
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 31px;
+    height: 45px;
+    background: url(../images/t-logo.png) 0 0 no-repeat;
+  }
+
+  .btn-menu {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../images/t-ham.png) no-repeat 50%;
+  }
+}
+
+/* 추가 분기 */
+@media (max-width: 700px) {
+  #footer {
+    padding: 80px 0;
+  }
+  .foot-list {
+    display: initial;
+  }
+  .foot-menu {
+    display: initial;
+    display: block;
+    margin-top: 40px;
+  }
+  .foot-menu li {
+    padding: 20px 0;
+  }
+  .foot-social-links {
+    margin-top: 80px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 430px) {
+  #header .inner {
+    width: 93.0233%;
+  }
+}

@@ -1,0 +1,1002 @@
+@charset 'utf-8';
+
+main#container {
+  padding-top: 120px;
+}
+
+.visual {
+  height: 1080px;
+  height: 56.25vw;
+}
+
+.visual-con {
+  display: flex;
+  align-items: center;
+  width: 1580px;
+  width: 83.0268%;
+  margin: 0 auto;
+}
+.title {
+  width: 655px;
+  width: 41.4557%;
+}
+.title h2 {
+  font-weight: bold;
+  font-size: 75px;
+  color: var(--text-color2);
+}
+.title h2 strong {
+  color: var(--text-color);
+}
+.visual-con figure {
+  width: 925px;
+  width: 58.5443%;
+}
+
+/* society : 시작 */
+.society {
+  position: relative;
+  height: 1080px;
+  height: 56.25vw;
+}
+.society::before {
+  content: '';
+  display: block;
+  background: url(../images/society.png) no-repeat 0 0 / cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: zoom-in 3s both;
+}
+
+.society-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  /* width: 1080px; */
+  width: 90%;
+}
+.society-text h3 {
+  font-weight: 900;
+  font-size: 70px;
+  color: var(--text-color2);
+  line-height: 1.2;
+}
+.society-text h3 strong {
+  color: var(--text-color);
+}
+.society-text p {
+  font-size: 22px;
+  margin-top: 50px;
+  line-height: 1.7;
+}
+.society-text .btn-more {
+  margin-top: 50px;
+}
+
+/* areas : 시작 */
+.areas {
+  padding: 200px 0;
+  /* border: 1px solid #f00; */
+}
+.fivekey {
+  text-align: center;
+}
+
+.fivekey h3 {
+  font-weight: 700;
+  font-size: 70px;
+  color: var(--text-color2);
+  line-height: 1.2;
+}
+.fivekey h3 strong {
+  color: var(--text-color);
+}
+.fivekey p {
+  font-size: 22px;
+  line-height: 1.7;
+  margin-top: 30px;
+  font-family: 'Pretendard';
+  font-weight: 300;
+}
+
+.swiper fivekey-list-wrap {
+}
+
+.fivekey-list {
+  width: 3000px;
+  display: flex;
+  gap: 40px;
+}
+
+.fivekey-list li {
+  margin-top: 120px;
+  width: 420px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.fivekey-list li:hover {
+}
+.fivekey-list li:hover strong {
+  opacity: 0;
+}
+.fivekey-list li::before {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 15px;
+  background: #ffce00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.fivekey-list li::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 15px;
+  background: #ffce00;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.fivekey-list a::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 0%;
+  background: #ffce00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.fivekey-list a::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 0%;
+  background: #ffce00;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.fivekey-list li:hover::before,
+.fivekey-list li:hover::after {
+  width: 100%;
+}
+.fivekey-list li:hover a::before,
+.fivekey-list li:hover a::after {
+  height: 100%;
+}
+
+.fivekey-list li a strong {
+  font-weight: 500;
+  font-size: 30px;
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  left: 30px;
+  font-family: 'Pretendard';
+  font-weight: 400;
+}
+.fivekey-list li a figure {
+  width: 420px;
+  height: 500px;
+}
+.fivekey-list li:hover a figure {
+  overflow: hidden;
+}
+.fivekey-list li a figure img {
+  transition: 0.8s;
+}
+.fivekey-list li:hover a figure img {
+  transform: scale(1.25);
+  transition: 1s;
+}
+
+.list-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 80px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.4s;
+}
+.list-info dt {
+  font-size: 40px;
+}
+.list-info dd {
+  font-size: 24px;
+  margin-top: 30px;
+}
+.fivekey-list li:hover .list-info {
+  opacity: 1;
+  transition: 0 0.4s;
+}
+
+/* disney : 시작 */
+.disneyplus {
+  padding: 200px 0;
+}
+
+.small-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 30px;
+  width: 390px;
+  height: 40px;
+}
+.small-title h3 {
+}
+.small-title::before {
+  content: '';
+  display: block;
+  border-top: 1px solid #fff;
+  width: 120px;
+}
+/* 이미지와 텍스트를 잡아주는 영역이 하나 더 필요할까? */
+.small-title::after {
+  content: '';
+  display: block;
+  background: url(../images/arrow2-ws.png) 0 0 no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.disneyplus-con {
+  position: relative;
+  margin-top: 30px;
+  /* border: 1px solid #fff; */
+}
+.disney-img {
+  width: 1200px;
+  width: 63.0583%;
+  height: 900px;
+  margin-left: auto;
+  /* border: 1px solid #f00; */
+}
+.disney-img iframe {
+  -webkit-mask-image: url(../images/disney.png);
+  -webkit-mask-size: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.disney-text {
+  position: absolute;
+  top: 130px;
+  left: 200px;
+}
+.disney-text strong {
+  font-size: 26px;
+  font-family: 'Pretendard';
+  font-weight: 300;
+}
+.disney-text h4 {
+  font-weight: bold;
+  font-size: 100px;
+  margin-top: 60px;
+  line-height: 1;
+}
+.disney-text p {
+  font-size: 26px;
+  line-height: 1.7;
+  margin-top: 40px;
+  font-family: 'Pretendard';
+  font-weight: 300;
+}
+.disney-text a {
+  margin-top: 90px;
+}
+
+/* store : 시작 */
+.store {
+  /* border: 1px solid #5f5; */
+}
+
+.small-title-store {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 30px;
+  width: 246px;
+  height: 40px;
+}
+
+.small-title-store::before {
+  content: '';
+  display: block;
+  border-top: 1px solid #fff;
+  width: 120px;
+}
+.mall-title {
+}
+.swiper store-list-wrap {
+}
+.store-list {
+  width: 3000px;
+  display: flex;
+  gap: 40px;
+  margin-top: 100px;
+}
+.store-list li {
+  position: relative;
+  display: block;
+  width: 420px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.store-list li a figure {
+  width: 100%;
+  height: 100%;
+}
+.store-list li:hover a figure {
+  overflow: hidden;
+}
+.store-list li a figure img {
+  transition: 0.8s;
+}
+.store-list li:hover a figure img {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.store-list li:hover {
+  opacity: 1;
+}
+.store-list li::before {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 15px;
+  background: #ffce00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.store-list li::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 15px;
+  background: #ffce00;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.store-list a::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 0%;
+  background: #ffce00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.store-list a::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 0%;
+  background: #ffce00;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+.store-list li:hover::before,
+.store-list li:hover::after {
+  width: 100%;
+}
+.store-list li:hover a::before,
+.store-list li:hover a::after {
+  height: 100%;
+}
+.store-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.4s;
+}
+.store-info p {
+  font-size: 40px;
+}
+
+.store-list li:hover .store-info {
+  opacity: 1;
+  transition: 0 0.4s;
+}
+
+.store-text {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  height: 115px;
+  padding: 0 30px;
+  /* background: red; */
+  font-family: 'Pretendard';
+}
+.store-list li:hover .store-text {
+  opacity: 0;
+}
+
+.store-text strong {
+  font-size: 14px;
+  font-weight: 100;
+  font-family: 'Pretendard';
+}
+.store-text dl dt {
+  font-size: 26px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-family: 'Pretendard';
+}
+.store-text dl dd {
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Pretendard';
+}
+
+/* magazine : 시작 */
+.magazine {
+  padding: 200px 0 400px;
+}
+.magazine h3 {
+  font-weight: 700;
+  font-size: 70px;
+  text-align: center;
+}
+
+.swiper magazine-list-wrap {
+}
+.magazine-list {
+  display: flex;
+  margin-top: 100px;
+  width: 3000px;
+  gap: 160px;
+}
+.magazine-list li {
+  position: relative;
+  /* border: 1px solid #fff; */
+}
+.magazine-list li figure {
+}
+
+.magazine-text {
+  /* border: 1px solid #ff5; */
+  position: absolute;
+  top: 306px;
+  left: 0;
+  width: 100%;
+}
+
+.magazine-text h4 {
+  font-weight: 700;
+  font-size: 60px;
+  color: var(--text-color2);
+  margin-bottom: 35px;
+}
+.magazine-text h4 strong {
+  font-weight: 700;
+  font-size: 60px;
+  color: var(--text-color);
+  display: block;
+}
+.magazine-text strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+.magazine-text p {
+  font-size: 22px;
+  line-height: 1.7;
+  margin-top: 20px;
+  font-weight: 200;
+  width: 600px;
+
+  /* 말줄임 표시 */
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.magazine-text a.btn-more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1500px) {
+  .visual-con {
+    width: 960px;
+    width: 93.75%;
+  }
+  .title {
+    width: 50%;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title h2 br {
+    display: none;
+  }
+  .visual-con figure {
+    width: 50%;
+  }
+}
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+  /* main */
+  .visual-con {
+    width: 960px;
+    width: 93.75%;
+  }
+  .title {
+    width: 50%;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title h2 br {
+    display: none;
+  }
+  .visual-con figure {
+    width: 50%;
+  }
+
+  /* society */
+  .society-text {
+    width: 78.3333%;
+  }
+  .society-text h3 {
+    font-size: 40px;
+  }
+  .society-text p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .society-text p br {
+    display: none;
+  }
+  .society-text .btn-more {
+    margin-top: 30px;
+  }
+
+  /* fivekey */
+  .areas {
+    padding: 19.5313vw 0;
+  }
+  .fivekey h3 {
+    font-size: 40px;
+  }
+  .fivekey p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .fivekey-list li a strong {
+    font-size: 26px;
+  }
+
+  /* disney */
+  .disneyplus {
+    padding: 0 0 19.5313vw 0;
+  }
+  .small-title {
+    width: 339px;
+  }
+  .small-title::before {
+    width: 70px;
+  }
+
+  .disney-img {
+    width: 100%;
+    height: 800px;
+  }
+  .disney-text {
+    top: 498px;
+    left: 30px;
+  }
+  .disney-text strong {
+    display: none;
+  }
+  .disney-text h4 {
+    font-size: 80px;
+  }
+  .disney-text p {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .disney-text a {
+    margin-top: 30px;
+  }
+
+  /* store */
+  .store {
+    padding: 19.5313vw 0;
+  }
+
+  .magazine {
+    padding: 0 0 400px;
+  }
+  .magazine-list li figure {
+    width: 770px;
+    height: 380px;
+  }
+  .magazine-text {
+    top: 243px;
+  }
+  .magazine-text a.btn-more {
+    left: 0;
+    bottom: -90px;
+  }
+}
+
+/* 추가 분기 */
+@media (max-width: 700px) {
+  .visual {
+    position: relative;
+    height: auto;
+  }
+  .visual-con {
+    flex-direction: column-reverse;
+    width: 93.0233%;
+  }
+  .title {
+    width: 100%;
+    position: auto;
+    top: 340px;
+    left: 15px;
+  }
+  .title h2 {
+    font-size: 35px;
+  }
+  .title h2 br {
+    display: none;
+  }
+  .visual-con figure {
+    width: 100%;
+  }
+
+  .society {
+    height: 700px;
+    height: 163vw;
+  }
+
+  .areas {
+    margin-top: 11.6279%;
+    padding: 0;
+  }
+  .fivekey {
+  }
+  .fivekey h3 {
+    font-size: 30px;
+  }
+  .fivekey p {
+    font-size: 16px;
+  }
+  .fivekey p br {
+    display: none;
+  }
+
+  .fivekey-list {
+    width: 1000px;
+    display: flex;
+    gap: 40px;
+  }
+  .fivekey-list li {
+    margin-top: 50px;
+  }
+  .fivekey-list li a figure {
+    width: 270px;
+    height: 320px;
+  }
+  .fivekey-list li a figure img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .disneyplus {
+    padding: 39.5349% 0;
+  }
+  .disneyplus h3 {
+    font-size: 20px;
+    margin-left: 13px;
+  }
+  .small-title {
+    width: 150px;
+  }
+  .small-title::before {
+    display: none;
+  }
+  .disneyplus-con {
+    margin-top: 0;
+  }
+  .disney-img {
+    height: 340px;
+  }
+  .disney-img iframe {
+    height: 100%;
+  }
+
+  .disney-text {
+    top: 167px;
+  }
+
+  .disney-text h4 {
+    font-size: 40px;
+  }
+  .disney-text p {
+    font-size: 16px;
+  }
+
+  .store {
+    padding: 39.5349% 0;
+  }
+  .store h3 {
+    font-size: 20px;
+    margin-left: 13px;
+  }
+  .small-title-store::before {
+    display: none;
+  }
+  .small-title-store {
+  }
+  .store-list {
+    width: 1000px;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .store-list li {
+    height: 320px;
+  }
+  .store-list li a figure {
+    width: 270px;
+    height: 100%;
+  }
+  .store-list li a figure img {
+    width: 100%;
+    height: 100%;
+  }
+  .store-text {
+    padding: 0 15px;
+    bottom: 3.5rem;
+  }
+  .store-text strong {
+    font-size: 12px;
+  }
+  .store-text dl dt {
+    font-size: 30px;
+  }
+  .store-text dl dd {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  /* main */
+
+  .society {
+    text-align: center;
+    transition: 0.4s;
+  }
+  .society-text {
+    width: 100%;
+  }
+
+  .society-text h3 {
+    font-size: 25px;
+  }
+  .society-text p {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .society-text p br {
+    display: none;
+  }
+
+  .society-text a {
+    margin: 0 auto;
+  }
+
+  .areas {
+    margin-top: 11.6279%;
+    padding: 0;
+    transition: 0.4s;
+  }
+  .fivekey {
+  }
+  .fivekey h3 {
+    font-size: 30px;
+  }
+  .fivekey p {
+    font-size: 16px;
+  }
+  .fivekey p br {
+    display: none;
+  }
+
+  .fivekey-list {
+    width: 1000px;
+    display: flex;
+    gap: 40px;
+  }
+  .fivekey-list li {
+    margin-top: 50px;
+  }
+  .fivekey-list li a figure {
+    width: 270px;
+    height: 320px;
+  }
+  .fivekey-list li a figure img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .disneyplus {
+    padding: 39.5349% 0;
+    transition: 0.4s;
+  }
+  .disneyplus h3 {
+    font-size: 20px;
+    margin-left: 13px;
+  }
+  .small-title {
+    width: 150px;
+  }
+  .small-title::before {
+    display: none;
+  }
+  .disneyplus-con {
+    margin-top: 0;
+  }
+  .disney-img {
+    height: 340px;
+  }
+  .disney-img iframe {
+    height: 100%;
+  }
+
+  .disney-text {
+    top: 167px;
+  }
+
+  .disney-text h4 {
+    font-size: 40px;
+  }
+  .disney-text p {
+    font-size: 16px;
+  }
+
+  .store {
+    padding: 39.5349% 0;
+    transition: 0.4s;
+  }
+  .store h3 {
+    font-size: 20px;
+    margin-left: 13px;
+  }
+  .small-title-store::before {
+    display: none;
+  }
+  .small-title-store {
+  }
+  .store-list {
+    width: 1000px;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .store-list li {
+    height: 320px;
+  }
+  .store-list li a figure {
+    width: 270px;
+    height: 100%;
+  }
+  .store-list li a figure img {
+    width: 100%;
+    height: 100%;
+  }
+  .store-text {
+    padding: 0 15px;
+    bottom: 3.5rem;
+  }
+  .store-text strong {
+    font-size: 12px;
+  }
+  .store-text dl dt {
+    font-size: 30px;
+  }
+  .store-text dl dd {
+    font-size: 14px;
+  }
+
+  .magazine {
+    padding: 0 0 200px;
+    transition: 0.4s;
+  }
+
+  .magazine .inner {
+    width: 100%;
+  }
+
+  .magazine h3 {
+    font-size: 30px;
+  }
+  .magazine-list {
+    margin-top: 30px;
+  }
+  .magazine-list li figure img {
+    width: 430px;
+    height: 250px;
+  }
+  .magazine-text {
+    top: 152px;
+    left: 15px;
+    width: 400px;
+  }
+  .magazine-text h4 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .magazine-text h4 > strong {
+    margin-top: 20px;
+    margin-top: 0;
+  }
+  .magazine-text strong {
+    font-size: 16px;
+  }
+  .magazine-text p {
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .btn-more {
+  }
+  .magazine-text a.btn-more {
+  }
+}

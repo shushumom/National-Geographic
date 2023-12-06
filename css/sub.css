@@ -1,0 +1,377 @@
+@charset 'utf-8';
+
+#header {
+  background: transparent;
+  /* backdrop-filter: none; */
+}
+
+.brand {
+}
+.sub-visual {
+  position: relative;
+  height: 800px;
+  /* height: 41.6667vw; */
+  overflow: hidden;
+}
+.sub-visual::before {
+  content: '';
+  display: block;
+  background: url(../sub-images/brand-main.png) no-repeat 0 0 / contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: zoom-in 3s both;
+}
+.sub-title-wrap {
+  padding-top: 400px;
+}
+.sub-title-wrap h2 {
+  font-size: 40px;
+  color: var(--text-color);
+}
+.sub-title-wrap h3 {
+  font-size: 60px;
+  margin-top: 0;
+}
+
+.video {
+  margin-top: -190px;
+}
+
+.video figure {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+.video figure video {
+  width: 100%;
+  height: 100%;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.slogan {
+  text-align: center;
+  padding: 200px 0;
+  /* border: 1px solid #5f5; */
+  animation: show-ani 3s both;
+}
+
+.slogan-con::before {
+  content: '';
+  display: block;
+  background: url(../sub-images/logo.png) 0 0 no-repeat;
+  width: 114px;
+  height: 161px;
+  margin: 0 auto;
+}
+.slogan-con h3 {
+  font-weight: bold;
+  font-size: 75px;
+  margin: 70px auto;
+}
+.slogan-con h3 strong {
+  font-weight: bold;
+  font-size: 75px;
+  color: var(--text-color);
+}
+.slogan-con em {
+  /* border: 1px solid #fff; */
+  font-weight: bold;
+  font-size: 40px;
+}
+.slogan-con p {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.card-list {
+  max-width: 1920px;
+  margin: 0 auto;
+  /* border: 5px solid #f00; */
+}
+.card-list li {
+  display: flex;
+  padding: 7.8125% 0;
+}
+.card-list li figure {
+  width: 50%;
+  /* border: 1px solid #ff5; */
+}
+
+.card-list li .card-con {
+  width: 50%;
+  /* border: 1px solid #5f5; */
+}
+
+.card-list li:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.card-con {
+  padding: 0 70px 0 135px;
+}
+
+.card-list li:nth-child(even) .card-con {
+  padding: 0 135px 0 70px;
+}
+
+.card-con-text h4 {
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 1.2;
+}
+.card-con-text h4 strong {
+  font-weight: bold;
+  font-size: 70px;
+  color: var(--text-color);
+  display: block;
+}
+.card-con-text p {
+  font-size: 22px;
+  margin-top: 40px;
+}
+.card-con-text a {
+  font-size: 26px;
+  margin-top: 80px;
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 190px;
+  height: 40px;
+  font-size: 22px;
+  color: var(--text-color);
+}
+.card-btn::after {
+  content: '';
+  display: block;
+  background: url(../sub-images/fluent_ios-arrow-24-filled.png) 0 0 no-repeat;
+  width: 18px;
+  height: 18px;
+}
+
+.earth {
+  background: url(../sub-images/world.png) no-repeat 0 0 / cover;
+  height: 800px;
+}
+
+.earth .inner {
+  position: relative;
+  height: 100%;
+}
+
+.earth-text {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.earth-text h4 {
+  font-weight: bold;
+  font-size: 100px;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+.earth-text p {
+  font-size: 28px;
+  margin-top: 60px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1360px) {
+  .sub-visual::before {
+    background: url(../sub-images/brand-main-T.png) 0 0 no-repeat / contain;
+  }
+  .card-list {
+    width: 93.75%;
+    margin: 0 auto;
+  }
+
+  .card-list li:nth-child(even) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .card-list li {
+    flex-direction: column;
+    padding: 7.3242% 0;
+  }
+  .card-list li figure {
+    width: 100%;
+  }
+  .card-list li figure img {
+    width: 100%;
+  }
+
+  .card-list li .card-con {
+    width: 80%;
+    padding: 0;
+    margin-top: -12vw;
+  }
+
+  .card-list li:nth-child(2n) .card-con {
+    padding: 0;
+    align-self: flex-end;
+  }
+  .card-list li:nth-child(2) .card-con {
+    margin-top: -6vw;
+  }
+
+  .card-con-text h4 {
+    font-size: 60px;
+  }
+  .card-con-text p {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .card-con-text a {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .card-btn {
+    width: 135px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sub-title-wrap h2 {
+    font-size: 30px;
+  }
+  .sub-title-wrap h3 {
+    font-size: 50px;
+  }
+
+  .slogan {
+    padding: 10.7422vw 0;
+  }
+
+  .slogan-con h3 {
+    font-size: 50px;
+  }
+  .slogan-con h3 strong {
+    font-size: 50px;
+  }
+  .slogan-con em {
+    font-size: 30px;
+  }
+  .slogan-con p {
+    font-size: 20px;
+  }
+
+  .earth {
+    height: 600px;
+  }
+
+  .earth-text h4 {
+    font-size: 70px;
+  }
+  .earth-text p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sub-visual::before {
+    background: url(../sub-images/brand-main-m.png) 0 0 no-repeat / contain;
+    height: 400px;
+  }
+
+  .sub-title-wrap {
+    padding: 130px 0;
+  }
+  .sub-title-wrap h2 {
+    font-size: 20px;
+  }
+  .sub-title-wrap h3 {
+    font-size: 30px;
+  }
+  .video {
+    margin-top: -580px;
+  }
+
+  .slogan {
+    padding: 23.2558% 0;
+  }
+  .slogan-con::before {
+    background: url(../sub-images/logo-m.png) 0 0 no-repeat;
+    width: 60px;
+    height: 83px;
+  }
+  .slogan-con h3 {
+    font-size: 26px;
+    margin: 35px 0;
+  }
+  .slogan-con h3 strong {
+    font-size: 26px;
+  }
+  .slogan-con em {
+    font-size: 18px;
+  }
+  .slogan-con p {
+    font-size: 16px;
+    margin: 10px auto 0;
+    width: 350px;
+  }
+
+  .card-list {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .card-list li .card-con {
+    width: 93.0233%;
+    margin: -5vw auto 0;
+  }
+
+  .card-list li {
+    padding: 9.3023% 0;
+  }
+
+  .card-con-text h4 {
+    font-size: 30px;
+  }
+  .card-con-text h4 strong {
+    font-size: 30px;
+  }
+  .card-con-text p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .card-con-text a {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .card-btn {
+    width: 135px;
+  }
+
+  .earth {
+    height: 400px;
+  }
+  .earth-text {
+  }
+  .earth-text h4 {
+    font-size: 35px;
+  }
+  .earth-text p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .earth-text p br {
+    display: none;
+  }
+}
